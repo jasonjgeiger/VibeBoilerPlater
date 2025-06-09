@@ -1,0 +1,19 @@
+name: vibe-boilerplate-mcp
+services:
+  - name: mcp-server
+    project: .
+    language: node
+    host: appservice
+    region: eastus
+    sku: B1
+    runtime: node:18-lts
+    env:
+      - name: NODE_ENV
+        value: production
+      - name: PORT
+        value: 8080
+    settings:
+      - name: WEBSITE_NODE_DEFAULT_VERSION
+        value: ~18
+      - name: SCM_DO_BUILD_DURING_DEPLOYMENT
+        value: true 

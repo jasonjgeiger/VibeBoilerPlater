@@ -1,0 +1,17 @@
+{
+  "mcp": {
+    "enabled": true,
+    "server": {
+      "url": "http://localhost:3000",
+      "endpoints": {
+        "rules": "/mcp/rules",
+        "apply": "/mcp/apply",
+        "health": "/health"
+      }
+    },
+    "rules": {
+      "directory": ".cursor/rules",
+      "extension": ".mdc"
+    }
+  }
+} 
