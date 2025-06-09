@@ -1,0 +1,34 @@
+---
+description: Frontend implementation guidelines for Ketchup contextual updates
+globs: 
+alwaysApply: true
+---
+#Frontend Implementation Guidelines
+
+## Layout Structure
+- Base resolution: 1920x1080px
+- Responsive design principles should be applied
+- Single page application with card-based interface
+- Background: Subtle gradient or neutral color (recommend #f8f9fa to #ffffff)
+
+## Animation Guidelines
+- Use CSS transitions for smooth animations (300-400ms duration)
+- Ease-in-out timing function for natural movement
+- Add subtle scale effect when transitioning between stages
+- Consider using framer-motion for more complex animations
+
+## State Management
+- Track current view state
+- Components will likely use the same state management system as the rest of the app ""
+- Cache recent data to improve performance
+
+## Accessibility
+- Maintain contrast ratios of at least 4.5:1 for text
+- Ensure keyboard navigability between all interactive elements
+- Include ARIA labels for dynamic content
+- Support screen readers for all important information
+
+## Responsive Considerations
+- On smaller screens, adjust card dimensions proportionally
+- For mobile, consider a different transition pattern (e.g., slide from right)
+- Maintain tap target sizes of at least 44x44px for touch devices

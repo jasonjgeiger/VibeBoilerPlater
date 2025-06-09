@@ -1,0 +1,148 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## Documentation Types
+
+1. **Changelog** (`docs/changelog/YYYY-MM.md`)
+   - Tracks technical changes and milestones
+   - Focuses on what was changed
+   - Maintains project history
+   - Used for version tracking
+
+2. **Journal** (`docs/journal/YYYY-MM.md`)
+   - Records user interactions and decisions
+   - Captures the reasoning behind changes
+   - Documents the development process
+   - Tracks project evolution
+
+## Changelog Entry Format
+
+Each changelog entry MUST follow this structure:
+
+```markdown
+## [YYYY-MM-DD] - Brief Title
+
+### Changes
+- List of specific changes made
+- Each change should be a complete sentence
+- Include file paths when relevant
+- Use appropriate tags: [FEATURE], [FIX], [REFACTOR], [DOCS], [SEC], [CHORE]
+
+### Technical Impact
+- How these changes affect the project
+- Any migration steps needed
+- Breaking changes highlighted
+
+### References
+- Links to related PRs/issues
+- Documentation updates
+- Related components affected
+```
+
+## Journal Entry Format
+
+Each journal entry MUST follow this structure:
+
+```markdown
+## [YYYY-MM-DD] - Brief Title
+
+### User Request
+> Quote the user's request or question
+
+### Agent Response
+- Summary of the agent's understanding
+- Key points addressed
+- Decisions made
+- Alternatives considered
+
+### Actions Taken
+- List of specific actions performed
+- Files created or modified
+- Changes implemented
+- Documentation updated
+
+### Outcome
+- Results achieved
+- Decisions made
+- Next steps identified
+- Any follow-up needed
+
+### Related Changes
+- Links to changelog entries
+- Documentation updates
+- Related components affected
+```
+
+## Documentation Update Rules
+
+When you identify a milestone:
+
+1. For technical changes:
+   - Update the changelog in `docs/changelog/YYYY-MM.md`
+   - Use appropriate change tags
+   - Include technical impact
+   - Reference affected files
+
+2. For user interactions:
+   - Update the journal in `docs/journal/YYYY-MM.md`
+   - Include the user's request
+   - Document the response and actions
+   - Link to related changelog entries
+
+3. For all substantive changes:
+   - Create both changelog and journal entries
+   - Cross-reference between entries
+   - Maintain chronological order
+   - Include all relevant context
+
+## Documentation Update Process
+
+When updating any documentation file:
+
+1. Maintain the existing formatting and structure of the file
+2. Place new entries in chronological order
+3. Organize content logically
+4. Be concise but comprehensive
+5. Include dates for all entries
+6. Reference related files and components
+
+## Journal Maintenance
+
+1. Monthly Organization:
+   - Create new files for each month: `YYYY-MM.md`
+   - Archive old files in respective archive directories
+   - Keep current month's files in root directories
+
+2. Entry Categories:
+   - Use tags to categorize entries:
+     - `[FEATURE]` for new features
+     - `[FIX]` for bug fixes
+     - `[REFACTOR]` for code improvements
+     - `[DOCS]` for documentation updates
+     - `[SEC]` for security changes
+     - `[CHORE]` for maintenance tasks
+
+3. Cross-References:
+   - Link related entries using markdown links
+   - Reference specific commits or PRs
+   - Link to relevant documentation files
+
+## Automatic Update Checklist
+
+Before ending any interaction, the agent MUST:
+
+1. Review all changes made during the interaction
+2. Identify any milestones or significant changes
+3. Update both changelog and journal with appropriate entries
+4. Use correct tags for categorization
+5. Include all relevant references
+6. Maintain chronological order
+7. Follow the respective entry formats
+8. Cross-reference between changelog and journal entries
+
+Before ending a conversation where milestones were reached, inform the user which documentation files were updated and why.
+
+
+

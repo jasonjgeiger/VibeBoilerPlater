@@ -1,0 +1,279 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+Description: Coding Standards and Guidelines for web projects
+Globs: *.tsx, *.ts, *.js, *.html
+---
+
+## Core Principles
+
+1. **Stay Scrappy**
+   - Prefer simple solutions over complex architectures
+   - Avoid premature optimization
+   - Use existing services when possible
+   - Focus on rapid prototyping and iteration
+
+2. **Backend Services**
+   - Avoid creating new backend services unless absolutely necessary
+   - Consider serverless functions for small, isolated tasks
+   - Use existing APIs and services when possible
+   - If backend is needed, start with a simple Express/Fastify setup
+
+3. **State Management**
+   - Start with React's built-in state management
+   - Use Context API for simple global state
+   - Only introduce Redux/Zustand if complexity demands it
+   - Keep state as local as possible
+
+## Inline Documentation
+
+1. **Component Documentation**
+   ```typescript
+   /**
+    * AccordionPanel - A collapsible panel component for organizing content
+    * 
+    * @component
+    * @example
+    * <AccordionPanel
+    *   title="Section 1"
+    *   isOpen={true}
+    *   onToggle={() => {}}
+    * >
+    *   Content here
+    * </AccordionPanel>
+    * 
+    * @why
+    * - Provides consistent UI for expandable content
+    * - Handles accessibility requirements
+    * - Manages animation states
+    * 
+    * @dependencies
+    * - framer-motion: For smooth animations
+    * - @radix-ui/react-accordion: For accessibility
+    */
+   ```
+
+2. **Hook Documentation**
+   ```typescript
+   /**
+    * useAccordionState - Manages the open/close state of accordion panels
+    * 
+    * @hook
+    * @example
+    * const { isOpen, toggle } = useAccordionState();
+    * 
+    * @why
+    * - Centralizes accordion state logic
+    * - Handles keyboard interactions
+    * - Manages animation timing
+    * 
+    * @returns {Object} State and control functions
+    * @returns {boolean} isOpen - Current panel state
+    * @returns {Function} toggle - Toggle panel state
+    */
+   ```
+
+3. **Utility Function Documentation**
+   ```typescript
+   /**
+    * formatAccordionData - Transforms raw data into accordion panel format
+    * 
+    * @function
+    * @example
+    * const panels = formatAccordionData(rawData);
+    * 
+    * @why
+    * - Standardizes data structure for accordion panels
+    * - Handles edge cases in data formatting
+    * - Provides type safety for panel data
+    * 
+    * @param {RawData} data - The raw data to transform
+    * @returns {AccordionPanel[]} Formatted panel data
+    * @throws {Error} If data structure is invalid
+    */
+   ```
+
+4. **Documentation Requirements**
+
+   a. **What it Does**
+   - Clear description of functionality
+   - Input/output expectations
+   - Edge cases and limitations
+   - Performance considerations
+
+   b. **How it's Used**
+   - Usage examples
+   - Common patterns
+   - Integration points
+   - Configuration options
+
+   c. **Why it Exists**
+   - Business requirements
+   - Technical decisions
+   - Alternatives considered
+   - Future considerations
+
+   d. **Important Notes**
+   - Dependencies
+   - Side effects
+   - Security considerations
+   - Breaking changes
+
+5. **Documentation Format**
+   - Use JSDoc for TypeScript/JavaScript
+   - Keep comments concise but complete
+   - Use markdown formatting for readability
+   - Include type information
+   - Document all parameters and returns
+
+6. **Documentation Updates**
+   - Update docs when functionality changes
+   - Keep examples current
+   - Document deprecations
+   - Note version requirements
+
+## Library Selection Criteria
+
+### Required Criteria
+- Active maintenance (regular updates in last 6 months)
+- Good documentation
+- Strong community support
+- TypeScript support
+- Bundle size under 50KB (gzipped)
+
+### Preferred Libraries
+
+#### Core
+- **React**: Latest stable version
+- **TypeScript**: Latest stable version
+- **Vite**: For build tooling
+- **ESLint**: For code quality
+- **Prettier**: For code formatting
+
+#### UI/UX
+- **Framer Motion**: For animations
+- **Tailwind CSS**: For styling
+- **Radix UI**: For accessible components
+- **React Query**: For data fetching
+- **Zod**: For runtime type validation
+
+#### Testing
+- **Vitest**: For unit testing
+- **Testing Library**: For component testing
+- **Cypress**: For E2E testing
+- **MSW**: For API mocking
+
+#### Development
+- **Husky**: For git hooks
+- **lint-staged**: For pre-commit checks
+- **commitlint**: For commit message standards
+
+## Package Management
+
+1. **Version Control**
+   - Use exact versions for critical dependencies
+   - Use caret (^) for minor updates in dev dependencies
+   - Lock file must be committed
+   - Regular dependency updates (monthly)
+
+2. **Security**
+   - Regular `npm audit` checks
+   - No packages with known vulnerabilities
+   - Prefer packages with security policies
+   - Regular dependency updates
+
+## Code Organization
+
+1. **File Structure**
+   ```
+   src/
+   ├── components/     # Reusable components
+   ├── hooks/         # Custom hooks
+   ├── utils/         # Utility functions
+   ├── types/         # TypeScript types
+   ├── constants/     # Constants and config
+   └── styles/        # Global styles
+   ```
+
+2. **Component Structure**
+   - One component per file
+   - Co-locate tests and styles
+   - Keep components focused and small
+   - Use composition over inheritance
+
+## Performance Guidelines
+
+1. **Bundle Size**
+   - Keep initial bundle under 200KB
+   - Use code splitting for routes
+   - Lazy load non-critical components
+   - Monitor bundle size regularly
+
+2. **Rendering**
+   - Use React.memo sparingly
+   - Implement virtualization for long lists
+   - Optimize images and assets
+   - Use proper loading states
+
+## Accessibility
+
+1. **Core Requirements**
+   - Semantic HTML
+   - ARIA attributes when needed
+   - Keyboard navigation
+   - Screen reader support
+   - Color contrast compliance
+
+2. **Testing**
+   - Regular a11y audits
+   - Automated testing with jest-axe
+   - Manual testing with screen readers
+   - Keyboard navigation testing
+
+## Documentation
+
+1. **Code Documentation**
+   - JSDoc for complex functions
+   - Clear component props documentation
+   - Usage examples in comments
+   - TypeScript types as documentation
+
+2. **Project Documentation**
+   - Keep README up to date
+   - Document architectural decisions
+   - Maintain changelog
+   - Document known issues
+
+## Git Workflow
+
+1. **Branching**
+   - `main`: Production-ready code
+   - `develop`: Development branch
+   - `feature/*`: New features
+   - `fix/*`: Bug fixes
+   - `chore/*`: Maintenance
+
+2. **Commits**
+   - Conventional commits format
+   - Clear, descriptive messages
+   - Reference issues/PRs
+   - Keep commits focused
+
+## Error Handling
+
+1. **Frontend**
+   - Use error boundaries
+   - Graceful fallbacks
+   - User-friendly error messages
+   - Proper error logging
+
+2. **API**
+   - Consistent error responses
+   - Proper status codes
+   - Error type definitions
+   - Retry mechanisms for transient failures
+
+

@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "rules": {
+    "general": {
+      "maxLineLength": 100,
+      "indentation": "spaces",
+      "spacesPerIndent": 2,
+      "requireComments": {
+        "functions": true,
+        "classes": true,
+        "complexLogic": true
+      },
+      "stayScrappy": {
+        "preferSimpleSolutions": true,
+        "avoidPrematureOptimization": true,
+        "useExistingServices": true,
+        "focusOnPrototyping": true
+      }
+    },
+    "naming": {
+      "variables": {
+        "style": "camelCase",
+        "constants": "UPPER_SNAKE_CASE"
+      },
+      "functions": {
+        "style": "camelCase",
+        "verbs": ["get", "set", "is", "has", "should", "can", "will", "do", "handle", "process"]
+      },
+      "classes": {
+        "style": "PascalCase"
+      },
+      "files": {
+        "components": "PascalCase",
+        "utilities": "camelCase",
+        "tests": "*.test.*",
+        "hooks": "use*.ts",
+        "context": "*Context.ts",
+        "types": "*.types.ts"
+      }
+    },
+    "documentation": {
+      "required": {
+        "readme": true,
+        "api": true,
+        "component": true,
+        "inline": true
+      },
+      "format": "markdown",
+      "templates": {
+        "component": "docs/templates/component.md",
+        "api": "docs/templates/api.md",
+        "hook": "docs/templates/hook.md",
+        "context": "docs/templates/context.md"
+      },
+      "inline": {
+        "what": true,
+        "how": true,
+        "why": true,
+        "dependencies": true
+      }
+    },
+    "testing": {
+      "required": {
+        "unit": true,
+        "integration": true,
+        "e2e": true
+      },
+      "coverage": {
+        "minimum": 80
+      },
+      "frameworks": {
+        "unit": "vitest",
+        "component": "testing-library",
+        "e2e": "cypress"
+      }
+    },
+    "security": {
+      "noHardcodedSecrets": true,
+      "noConsoleLogs": true,
+      "noEval": true,
+      "noInnerHTML": true,
+      "projectIsolation": {
+        "strict": true,
+        "noExternalAccess": true,
+        "noSystemAccess": true
+      },
+      "dataProtection": {
+        "useEnvFiles": true,
+        "noCredentialsInCode": true,
+        "encryptSensitiveData": true
+      }
+    },
+    "performance": {
+      "maxBundleSize": "200KB",
+      "maxDependencies": 50,
+      "requireLazyLoading": true,
+      "optimizations": {
+        "codeSplitting": true,
+        "treeShaking": true,
+        "imageOptimization": true
+      }
+    },
+    "accessibility": {
+      "requireAltText": true,
+      "requireAriaLabels": true,
+      "requireKeyboardNavigation": true,
+      "standards": {
+        "wcag": "2.1",
+        "level": "AA"
+      }
+    },
+    "git": {
+      "commitMessage": {
+        "format": "conventional",
+        "maxLength": 72
+      },
+      "branchNaming": {
+        "feature": "feature/*",
+        "bugfix": "bugfix/*",
+        "hotfix": "hotfix/*"
+      }
+    },
+    "copilot": {
+      "templates": {
+        "enabled": true,
+        "location": ".copilot/templates",
+        "types": ["component", "hook", "context", "test", "util"]
+      },
+      "snippets": {
+        "enabled": true,
+        "location": ".copilot/snippets",
+        "types": ["react", "typescript", "testing", "styling"]
+      },
+      "chat": {
+        "format": "markdown",
+        "includeCode": true,
+        "includeExamples": true
+      },
+      "completion": {
+        "preferTemplates": true,
+        "followRules": true,
+        "includeComments": true
+      }
+    }
+  }
+} 

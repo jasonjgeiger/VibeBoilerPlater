@@ -1,0 +1,167 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Security and Privacy Guidelines
+
+## Project Isolation
+
+1. **Directory Access**
+   - Agent MUST only access files within the project directory
+   - No access to parent directories or sibling projects
+   - No access to system directories or user home directory
+   - No access to external repositories or services
+
+2. **File Operations**
+   - Only read/write files within the project structure
+   - No file operations outside project boundaries
+   - No access to hidden system files
+   - No access to configuration files outside project
+
+3. **Environment Access**
+   - No access to environment variables outside project
+   - No access to system environment variables
+   - No access to user-specific environment files
+   - No access to global configuration files
+
+## Data Protection
+
+1. **Sensitive Information**
+   - No storage of API keys in code
+   - No storage of credentials in code
+   - No storage of personal information
+   - No storage of sensitive configuration
+
+2. **Configuration**
+   - Use `.env` files for environment variables
+   - Add `.env` to `.gitignore`
+   - Provide `.env.example` for documentation
+   - Use secure configuration management
+
+3. **Dependencies**
+   - Regular security audits of dependencies
+   - No unnecessary dependencies
+   - Lock dependency versions
+   - Document security requirements
+
+## Agent Interactions
+
+1. **Scope Limitations**
+   - Agent MUST stay within project context
+   - No access to external APIs without explicit permission
+   - No access to external services without explicit permission
+   - No access to external data sources without explicit permission
+
+2. **Command Execution**
+   - Only execute commands within project directory
+   - No system-level commands
+   - No network operations without explicit permission
+   - No file system operations outside project
+
+3. **Code Generation**
+   - No generation of malicious code
+   - No generation of code for external systems
+   - No generation of code for unauthorized purposes
+   - No generation of code that violates security policies
+
+## Development Practices
+
+1. **Code Review**
+   - Review all code for security issues
+   - Check for hardcoded credentials
+   - Check for exposed sensitive data
+   - Check for insecure dependencies
+
+2. **Testing**
+   - Include security testing
+   - Test for common vulnerabilities
+   - Test for data exposure
+   - Test for unauthorized access
+
+3. **Documentation**
+   - Document security requirements
+   - Document privacy considerations
+   - Document data handling
+   - Document access controls
+
+## Privacy Considerations
+
+1. **Data Collection**
+   - Minimize data collection
+   - Document all data collection
+   - Get explicit consent for data collection
+   - Provide data deletion options
+
+2. **Data Storage**
+   - Use secure storage methods
+   - Encrypt sensitive data
+   - Implement data retention policies
+   - Implement data deletion policies
+
+3. **Data Sharing**
+   - No sharing of user data
+   - No sharing of project data
+   - No sharing of configuration data
+   - No sharing of sensitive information
+
+## Security Checklist
+
+1. **Project Setup**
+   - [ ] Secure project structure
+   - [ ] Protected sensitive files
+   - [ ] Secure configuration
+   - [ ] Limited access scope
+
+2. **Development**
+   - [ ] Secure coding practices
+   - [ ] Regular security audits
+   - [ ] Dependency management
+   - [ ] Access control
+
+3. **Deployment**
+   - [ ] Secure deployment process
+   - [ ] Environment protection
+   - [ ] Access management
+   - [ ] Monitoring and logging
+
+## Incident Response
+
+1. **Detection**
+   - Monitor for security issues
+   - Monitor for privacy violations
+   - Monitor for unauthorized access
+   - Monitor for data exposure
+
+2. **Response**
+   - Document security incidents
+   - Contain security issues
+   - Notify affected parties
+   - Implement fixes
+
+3. **Prevention**
+   - Update security measures
+   - Update privacy policies
+   - Update access controls
+   - Update monitoring
+
+## Compliance
+
+1. **Standards**
+   - Follow security best practices
+   - Follow privacy regulations
+   - Follow data protection laws
+   - Follow industry standards
+
+2. **Documentation**
+   - Document compliance requirements
+   - Document security measures
+   - Document privacy policies
+   - Document incident response
+
+3. **Auditing**
+   - Regular security audits
+   - Regular privacy audits
+   - Regular compliance checks
+   - Regular policy reviews
+

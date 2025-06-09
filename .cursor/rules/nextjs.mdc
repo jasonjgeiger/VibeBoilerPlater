@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+Description: Next.js App Router standards
+Globs: *.tsx, *.ts
+---
+# Next.js Rules
+- Use App Router with `page.tsx` files
+- Mark client components with 'use client'
+- Use Tailwind CSS for styling
+- Reference @tailwind.config.js

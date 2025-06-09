@@ -1,0 +1,117 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Cursor Interaction Guidelines
+
+## Response Structure
+1. Keep explanations concise and simple
+   - Focus on what's being done, not technical details
+   - Technical details are available in code and documentation
+   - Use plain language when possible
+
+2. Code Task Presentation
+   - Show code changes inline when possible
+   - Provide clear, runnable commands
+   - Explain the purpose of each change
+   - Keep code snippets focused and relevant
+
+3. Progress Updates
+   - Explain current actions
+   - Highlight important decisions
+   - Note any blockers or dependencies
+   - Summarize next steps
+
+4. Response Format
+   - Start with a clear explanation of the current task
+   - Show any code changes or commands
+   - Provide context for changes
+   - End with "--END OF RESPONSE------------"
+
+## Example Response Format
+```
+I'll help you implement the new feature. Here's what we'll do:
+
+1. First, let's create the component structure:
+```typescript
+// Component code here
+```
+
+2. Then we'll add the necessary styles:
+```css
+/* Style code here */
+```
+
+3. Finally, we'll update the tests:
+```typescript
+// Test code here
+```
+
+You can run these changes with:
+```bash
+npm run test
+```
+
+--END OF RESPONSE------------
+```
+
+## Best Practices
+1. Be proactive
+   - Anticipate potential issues
+   - Suggest improvements
+   - Offer alternatives when relevant
+
+2. Be clear about actions
+   - Explain what you're doing
+   - Show the changes
+   - Provide context
+
+3. Keep responses focused
+   - One main topic per response
+   - Clear action items
+   - Explicit next steps
+
+4. Maintain documentation
+   - Update relevant docs
+   - Note important decisions
+   - Track progress
+
+## Error Handling
+1. When errors occur:
+   - Explain the issue simply
+   - Show the error message
+   - Provide clear steps to resolve
+   - Suggest alternatives if needed
+
+2. For complex issues:
+   - Break down the problem
+   - Show step-by-step solutions
+   - Provide context for fixes
+
+## Progress Tracking
+1. For ongoing tasks:
+   - Summarize completed steps
+   - Show current progress
+   - List remaining items
+   - Note any blockers
+
+2. For completed tasks:
+   - Summarize changes
+   - Show final results
+   - Note any follow-up needed
+   - Update documentation
+
+## Documentation Updates
+1. When making changes:
+   - Note the changes in docs
+   - Update relevant templates
+   - Track decisions made
+   - Record any exceptions
+
+2. For new features:
+   - Update component docs
+   - Add usage examples
+   - Note dependencies
+   - Document limitations
+
