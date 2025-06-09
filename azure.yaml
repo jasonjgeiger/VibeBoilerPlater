@@ -6,7 +6,7 @@ services:
     host: appservice
     region: eastus
     sku: B1
-    runtime: node:18-lts
+    runtime: NODE:18-lts
     env:
       - name: NODE_ENV
         value: production
