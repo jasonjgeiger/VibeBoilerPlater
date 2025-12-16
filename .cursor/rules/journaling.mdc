@@ -1,5 +1,5 @@
 ---
-applyTo: '**'
+alwaysApply: false
 ---
 # Journaling Guidelines
 
