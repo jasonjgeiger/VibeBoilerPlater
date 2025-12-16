@@ -1,6 +1,9 @@
 ---
+description: Guidelines for creating and updating the project journal
+globs: ["**/prompt-journal.md", "**/journal.md"]
 alwaysApply: false
 ---
+
 # Journaling Guidelines
 
 **Trigger Phrases:** `@journal`, `create journal entry`, `update journal`, `document milestone`, `log progress`, `add to journal`

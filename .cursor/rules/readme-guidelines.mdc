@@ -1,6 +1,9 @@
 ---
+description: Guidelines for creating and updating README.md files
+globs: ["**/README.md", "**/readme.md"]
 alwaysApply: false
 ---
+
 # README Guidelines
 
 **Trigger Phrases:** `@readme`, `create readme`, `update readme`, `readme guidelines`, `write readme`
